@@ -60,19 +60,18 @@ table {
 }
 .container,
 .grid {
-  margin: 1rem auto;
+  margin: .75rem auto;
 }
 .grid {
-  padding-left: 1rem;
-  padding-right: 1rem;  
+  padding-left: 8%;
+  padding-right: 8%;  
 }
 .columns {
   display: inline-block;
   vertical-align: top;
-  padding: 0 1rem;
   float: left;
-  margin-top: 1rem;
-
+  margin-top: .75rem;
+  padding: 0 .75rem;
 }
 
 .small-6 {
@@ -132,3 +131,11 @@ h2 {
   padding-top: 2rem;
 }
 
+body {
+  font-family: "proxima-nova";
+  font-size: 16px;
+  line-height: 1.6em;
+  letter-spacing: 0px;
+  font-weight: 400;
+  font-style: normal;
+}
