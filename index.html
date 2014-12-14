@@ -5,10 +5,15 @@
     <title>Julianna Scruggs' Work Samples</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- Google Fonts -->
-<link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,400,300,600,700' rel='stylesheet' type='text/css'>
-    <!--  CSS  -->
+    <meta name="description" content="Work Samples" />
+    <meta name="keywords" content="" />
+    <meta name="author" content="Julianna Scruggs" />
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,400,300,600,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="assets/FullWidthImageSlider/css/default.css" />
+    <link rel="stylesheet" type="text/css" href="assets/FullWidthImageSlider/css/component.css" />
     <link rel="stylesheet" href="assets/stylesheets/main.css">
+    <script src="assets/FullWidthImageSlider/js/modernizr.custom.js"></script>
   </head>
   <body>
       <!-- Header -->
@@ -111,21 +116,15 @@
           </h3>
         </div>
         <div class="group">
-          <div class="columns small-12 slider">
-            <ul>
-              <li id="slide-01">
-                <img src="assets/images/empty-device-connect.png" class="image">
-              </li>
-              <li id="slide-02">
-                <img src="assets/images/empty-sync-data.png" class="image">
-              </li>
-              <li id="slide-03">
-                <img src="assets/images/24-7-tracking.png" class="image">
-              </li>
-              <li id="slide-04">
-                <img src="assets/images/dashboard-date-label.png" class="image">
-              </li>
-            </ul>
+          <div class="columns small-12">
+            <div id="cbp-fwslider" class="cbp-fwslider">
+              <ul>
+                <li><a href="#"><img src="assets/images/empty-device-connect.png" class="image"></a></li>
+                <li><a href="#"><img src="assets/images/empty-sync-data.png" class="image"></a></li>
+                <li><a href="#"><img src="assets/images/24-7-tracking.png" class="image"></a></li>
+                <li><a href="#"><img src="assets/images/dashboard-date-label.png" class="image"></a></li>
+              </ul>
+            </div>
           </div>
           <div class="columns small-12 large-2">
             <h4>
@@ -165,5 +164,27 @@
     <!-- JavaScripts -->
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.0/jquery.min.js"></script>
     <script type="text/javascript" src="assets/js/script.js"></script>
+    <script src="assets/FullWidthImageSlider/js/jquery.cbpFWSlider.min.js"></script>
+    <script>
+      $( function() {
+        /*
+        - how to call the plugin:
+        $( selector ).cbpFWSlider( [options] );
+        - options:
+        {
+          // default transition speed (ms)
+          speed : 500,
+          // default transition easing
+          easing : 'ease'
+        }
+        - destroy:
+        $( selector ).cbpFWSlider( 'destroy' );
+        */
+
+        $( '#cbp-fwslider' ).cbpFWSlider();
+
+      } );
+    </script>
+
   </body>
 </html>
