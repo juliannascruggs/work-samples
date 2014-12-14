@@ -1,0 +1,263 @@
+html {
+     display: block;
+}
+div {
+    display: block;
+    -webkit-transition: all 600mseasing’s Bezier curve;
+    transition: all 1000ms easing’s Bezier curve; 
+}
+.box {
+    height:30px;
+    width: 30px;
+    background-color: red;
+}
+
+.BG {
+    height: 1096px;
+    width: 640px;
+    background-image: url("../images/RunningGirlBG.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow: visible;
+    z-index: 0;
+}
+.root {
+    overflow: hidden;
+    height: 1096px;
+    width: 640px;
+    z-index: 1;
+}
+.nav {
+     background-color: black;
+     height: 86px;
+     width: 640px;
+     display: inline-block;
+     font-family: "Urbano", Verdana, sans-serif;
+     font-size: 22px;
+     font-color: #fff;
+     text-transform: uppercase;
+}
+.nav div {
+float: left;
+margin: 30px;
+}
+a, a:visited, a:hover {
+  text-decoration: none;
+  color: #fff;
+}
+
+.title {
+font-size: 28px;
+padding-left: 40px;
+padding-right: 40px;
+}
+.top {
+     height: 50px;
+     width: 640px;
+     padding-top: 55px;
+}
+.top img {
+     float: left;
+     padding-left: 20px;
+}
+h2 {
+font-family: "Urbano", Verdana, sans-serif;
+font-size: 20px;
+color:  rgba(255, 255, 255, 0.8);
+text-transform: uppercase;
+letter-spacing: 0.3em;
+display: inline-block;
+margin-top: auto;
+margin-bottom: auto;
+margin-left: 28px;
+}
+
+/*begin swipe styles
+.swipe {
+  overflow: hidden;
+  visibility: hidden;
+/*  position: relative;
+}
+.swipe-wrap {
+  overflow: hidden;
+  position: relative;
+}
+.swipe-wrap > div {
+  float:left;
+  width:100%;
+  position: relative;
+}
+end swipe styles*/
+
+.log {
+	overflow-y: hidden;
+/*	overflow-x: scroll;
+    height: 210px;
+	width: 210px;  
+*/    width: 640px;
+    margin: 0px;
+/*	-webkit-overflow-scrolling: touch;
+    margin: 0px 110px 0px 220px;
+*/}
+.workout {
+	float: left;
+	overflow-y: hidden;
+	overflow-x: scroll;
+	width: 4600px;
+	padding-left: 210px;
+    padding-right: 210px;
+    margin-top: 10px;
+/*	-webkit-overflow-scrolling: touch;*/
+}
+.activityTray {
+	float: left;
+	height: 200px;
+    width: 200px;
+    border-radius: 5px;
+    border-style: none;
+    background-color: rgba(255,255,255,0.3);
+    display: inline-block;
+    margin: 5px 10px 5px 10px;
+    -webkit-transition: all 600ms;
+}
+.activityTray img {
+    padding-top: 50px;
+    padding-left: 60px;
+}
+.activityTray p {
+	text-align: center;
+	margin-top: 30px;
+	width: 200px;
+    font-family: "Urbano", Verdana, sans-serif;
+    font-size: 24px;
+    color: #414046;
+    text-transform: uppercase;
+    letter-spacing: 0.02em;
+}
+
+.highlightActivity {
+    height: 200px;
+    width: 200px;
+    background-color: rgba(255,255,255,1);
+/*  position: absolute;
+    left: 218px;
+    margin: 0px 10px 0px 10px;
+*/      -webkit-transition: all 600ms;
+}
+
+.marker {
+    position: absolute;
+    left: 255px;
+    padding-top: 7px;
+}
+.durationTicker, .distanceTicker {
+    position: relative;
+    margin-left: 295px;
+    margin-right: auto;
+/*    height: 60px;*/
+    margin-bottom: 1px;
+    font-family: "Urbano-LightCondensed", Verdana, sans-serif;
+    font-size: 36px;
+}
+
+/*analogous to .workout*/
+.duration, .distance {
+	float: left;
+	overflow-y: hidden;
+	overflow-x: scroll;
+	width: 11060px;
+	padding-left: 0px;
+	-webkit-overflow-scrolling: touch;
+}
+
+/*analogous to .activityTray*/
+.durationRuler, .distanceRuler {
+	width: 90px;
+	height: 150px;
+	display: inline-block;
+}
+
+.tick {
+    height: 22px;
+    width: 2px;
+    background-color: rgba(255,255,255,0.3);
+    margin-top: 15px;
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+}
+.it {
+    height: 16px;
+    width: 1px;
+    background-color: rgba(255,255,255,0.3);
+    display: block;
+    margin: 8px auto 0px auto;
+}  
+.ty {
+    margin: 0px auto 8px auto;
+}
+
+/*analogous to .activityTray p*/
+.time, .mile {
+/*    float: left;
+    clear: right;*/
+	padding: 1px;
+    margin-top: 15px;
+	font-family: "Urbano-LightCondensed", Verdana, sans-serif;
+    font-size: 27px;
+    color: rgba(255,255,255,0.5);
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    text-align: center;
+}
+.highlightDuration, .highlightDistance {
+    height: 150px;
+    width: 60px;
+    -webkit-transition: all 600ms;
+}
+
+
+/*the rest of this is crap*/
+
+.slide0 {
+	width: 140px; 
+	height: 140px; 
+	position: absolute;
+	left: -78px;
+	/*left: 30px; */
+/*	-webkit-transform: translateZ(-140px);
+*//*	margin-right: 10px;
+*/}
+.slide1 {
+	width: 140px; 
+	height: 140px; 
+	left: 68px;
+	/*left: 30px; */
+/*	-webkit-transform: translateZ(-140px);
+*//*	margin-right: 10px;
+*/}
+.slide2 {
+width: 140px; 
+height: 140px; 
+left: 428px;
+/*left: 500px; */
+/*margin-left: 10px;*/
+/*-webkit-transform: translateZ(-140px);*/
+}
+.slide3 {
+width: 140px; 
+height: 140px; 
+left:578px;
+/*left: 500px; */
+/*-webkit-transform: translateZ(-140px);*/
+}
+
+/*#time {
+	border:solid 1px white;
+    margin-top: 10px;
+    width:637px;
+    height:350px;
+    z-index: 2;
+}*/
+

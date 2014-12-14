@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html>
+<head>
+<!-- Framer header -->
+		<meta charset="utf-8">
+
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<meta name="format-detection" content="telephone=no">
+<!-- 		<meta name="viewport" content="width=640,initial-scale=0.5,user-scalable=no"> -->
+		<meta name="viewport" content="width=device-width,initial-scale=0.5,minimal-ui">
+		<link rel="apple-touch-icon-precomposed" href="https://raw.github.com/koenbok/Framer/master/template/icon/apple-touch-icon-144x144-precomposed.png" sizes="144x144">
+		<link rel="apple-touch-icon-precomposed" href="https://raw.github.com/koenbok/Framer/master/template/icon/apple-touch-icon-114x114-precomposed.png" sizes="114x114">
+		<link rel="apple-touch-icon-precomposed" href="https://raw.github.com/koenbok/Framer/master/template/icon/apple-touch-icon-72x72-precomposed.png" sizes="72x72">
+		<link rel="apple-touch-icon-precomposed" href="https://raw.github.com/koenbok/Framer/master/template/icon/apple-touch-icon-precomposed.png">
+<!-- My Header -->
+     <link rel='stylesheet' href='css/style.css'/>
+
+
+<!-- This makes my whole page not scroll together -->
+     <style type='text/css' media='screen'>
+     * {
+          margin:0;
+          padding:0;
+          -webkit-user-select:none;
+     }
+
+     body {
+          font: 28px/1em "Helvetica";
+          color: #FFF;
+          -webkit-tap-highlight-color: rgba(0,0,0,0);
+          -webkit-perspective: 1000px;
+          overflow: hidden;
+          background-color: #000;
+     }
+    
+     ::-webkit-scrollbar {
+          width: 0px;
+          height: 0px;
+     }
+
+     .highlight {
+	background-color: rgba(255,255,255,1);
+}
+     </style>
+
+</head>
+<body>
+<div class="BG">
+	<div class="root">
+	 <!-- Log Workout page nav bar -->
+	    <div class="nav">
+			<a href="http://invis.io/6E1EG5G4P">
+				<div>
+					<p>Cancel</p>
+				</div>
+			</a>
+			<div class="title">
+				<p>Log Workout</p>
+			</div>
+			<a href="http://invis.io/KS1EG4CXW">
+			<div>
+				<p>Done</p>
+			</div>
+			</a>
+	    </div>
+	<!-- Main body of the screen -->
+	<!-- Workout activity -->
+	    <div class="top">
+	        <img src="images/ActivityIcon.png">
+	        <h2>workout</h2>
+	    </div>
+	<!-- Activity type selector -->
+	    <div class="log">
+	        <div class="workout">
+	     	</div>
+	    </div>
+	<!-- Workout duration -->
+	    <div class="top">
+	        <img src="images/DurationIcon.png">
+	        <h2>duration</h2>
+	    </div>
+	<!-- Duration selector-->
+		<div class="durationTicker">
+		0:00
+		</div>
+		<div class="log">
+			<div class="marker">
+				<img src="images/DurationMarker.png" class="button">
+			</div>
+			<div class="duration">
+			</div>
+		</div>
+	<!-- Workout distance -->
+	    <div class="top">
+	        <img src="images/DistanceIcon.png">
+	        <h2>distance</h2>
+	    </div>
+	<!-- Distance selector -->
+		<div class="distanceTicker">
+		0.00
+		</div>
+		<div class="log">
+			<div class="marker">
+				<img src="images/DurationMarker.png" class="button">
+			</div>
+			<div class="distance">
+			</div>
+		</div>
+	</div>
+</div>
+
+<!-- Highlight activity type -->
+     <script type="text/javascript" src="js/jquery-1.3.2.min.js">
+    </script>
+ 	<script type="text/javascript" src="js/application.js">
+	 </script>
+<script type="text/javascript" media="screen">
+
+
+	jQuery(document).ready(function(){
+		$('div.log').scroll(function() {	
+		    var activity = document.getElementsByClassName('activityTray');
+	    	for (var i = 0; i < activity.length; i++) {		
+				var left_pos = $(activity[i]).position().left;
+				var right_pos = $(activity[i]).position().right;
+				var right_spot = 350;
+				var left_spot = 290;
+				// var right_spot = 430 - 5 * i;
+				// var left_spot = 210 - 5 * i;
+				var scenario1 = left_pos < right_spot && left_pos > left_spot;
+				var scenario2 = right_pos < right_spot && right_pos > left_spot;
+				if(scenario1 || scenario2) {
+	 				$('.activityTray').removeClass('highlightActivity');
+					$(activity[i]).addClass('highlightActivity');
+					console.log('Hi');
+				};
+			};
+		});
+		$('div.log').scroll(function() {	
+		    var time = document.getElementsByClassName('durationRuler');
+	    	for (var j = 0; j < time.length; j++) {		
+				var left_pos = $(time[j]).position().left;
+				var right_pos = $(time[j]).position().right;
+				var right_spot = 320;
+				var left_spot = 290;
+
+				// var right_spot = 430 - 5 * j;
+				// var left_spot = 210 - 5 * j;
+				var scenario1 = left_pos < right_spot && left_pos > left_spot;
+				var scenario2 = right_pos < right_spot && right_pos > left_spot;
+				if(scenario1 || scenario2) {
+	 				$('.durationRuler').removeClass('highlightDuration');
+					$(time[j]).addClass('highlightDuration');
+					setDurationTicker();
+					console.log(time[j]);
+				};
+			};
+		});
+		$('div.log').scroll(function() {	
+		    var dist = document.getElementsByClassName('distanceRuler');
+	    	for (var k = 0; k < dist.length; k++) {		
+				var left_pos = $(dist[k]).position().left;
+				var right_pos = $(dist[k]).position().right;
+				var right_spot = 320;
+				var left_spot = 290;
+
+				// var right_spot = 430 - 5 * j;
+				// var left_spot = 210 - 5 * j;
+				var scenario1 = left_pos < right_spot && left_pos > left_spot;
+				var scenario2 = right_pos < right_spot && right_pos > left_spot;
+				if(scenario1 || scenario2) {
+	 				$('.distanceRuler').removeClass('highlightDistance');
+					$(dist[k]).addClass('highlightDistance');
+					setDistanceTicker();
+					console.log(dist[k]);
+				};
+			};
+		});
+	});
+</script>
+
+</body>
+</html>
