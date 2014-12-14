@@ -62,16 +62,27 @@ table {
 .grid {
   margin: 2.75rem auto;
 }
-.grid {
+
+.container-slider,
+.grid-slider {
+  margin: 2.75rem auto;
+}
+
+.grid, .grid-slider {
   padding-left: 8%;
   padding-right: 8%;  
 }
-.columns {
+.columns, .columns-slider {
   display: inline-block;
   vertical-align: top;
   float: left;
   margin-top: .75rem;
   padding: 0 .75rem;
+}
+
+html, body, .container-slider, .group, .grid-slider, .columns-slider
+ { 
+  height: auto;
 }
 
 .small-6 {
@@ -102,10 +113,7 @@ table {
   }
 }
 
-.image {
-  max-width: 100%;
-  box-shadow: 0px 1px 5px #888888;
-}
+
 
 
 /*
@@ -169,4 +177,58 @@ strong {
 a {
   color: black;
   padding-right: .5rem;
+}
+
+/*
+  ========================================
+  Slider
+  ========================================
+*/
+
+.slider {
+  width: 100%;
+  height: auto;
+/*  margin: 1em auto; */
+  position: relative;
+  border: 4px solid #47a3da
+}
+
+.slider > ul {
+  list-style: none;
+  width: 100%;
+  height: auto;
+  overflow: hidden; 
+  position: relative;
+/*  padding: 0;
+    margin: 0; */
+}
+
+.slider > ul li {
+  position: absolute;
+  width: 100%;
+  height: auto;
+  left: 0;
+  top: 0;
+/*  padding: 1em;
+  background: #fff;
+*/
+}
+
+.slider li > div {
+  position: absolute;
+/*  top: 9em;
+  bottom: 3.313em; */
+  width: 100%;
+  left: 0;
+/*  padding: 0 1em; */
+  overflow-x: hidden;
+  overflow-y: auto;
+  z-index: 100;
+
+}
+
+.image {
+  max-width: 100%;
+  height: auto;
+  box-shadow: 0px 1px 5px #888888;
 }
