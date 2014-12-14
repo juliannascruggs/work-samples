@@ -46,6 +46,86 @@ table {
   border-collapse: collapse;
   border-spacing: 0;
 }
+
+/*
+  ========================================
+  Header
+  ========================================
+*/
+header h1, 
+header h4 {
+  display: inline-block;
+  margin-left: -4%;
+  margin-right: 6%;
+}
+
+header h4 {
+  padding-bottom: 3.5rem;
+  margin-left: -5%;
+}
+
+header {
+  display: block;
+  margin-right: 8%;
+  margin-left: 8%;
+}
+
+/*
+  ========================================
+  Typography
+  ========================================
+*/
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 1rem;
+  line-height: 1.6rem;
+  letter-spacing: 0rem;
+  font-weight: 400;
+  font-style: normal;
+  color: black;
+}
+
+h1 {
+  padding: 1rem 0;
+  font-size: 1.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+h2 {
+  padding-top: 4rem;
+  font-size: 1.4rem;
+  margin-left: -2%;
+}
+
+h3 {
+  font-weight: 600;
+}
+
+h4 {
+  font-style: italic;
+  font-size: .875rem;
+  letter-spacing: .06rem;
+  color: #999;
+  font-weight: 600;
+}
+
+p {
+  max-width: 49rem;
+}
+
+strong {
+  font-weight: 600;
+}
+
+a {
+  color: black;
+  margin-right: .5rem;
+  padding-bottom: 0.02rem;
+  border-bottom: black 1px solid;
+}
+
 /*
   ========================================
   Grid
@@ -86,6 +166,9 @@ table {
   } .medium-12 {
     width: 100%;
   }
+  h1 {
+    font-size: 2.25rem;
+  }
 }
 
 @media screen and (min-width: 64rem){
@@ -105,6 +188,7 @@ table {
 .image,
 .image-slider {
   max-width: 100%;
+  vertical-align: top;
 }
 
 .image {
@@ -129,51 +213,6 @@ table {
   *zoom: 1;
 }
 
-/*
-  ========================================
-  Typography
-  ========================================
-*/
-
-body {
-  font-family: 'Open Sans', sans-serif;
-  font-size: 1rem;
-  line-height: 1.6rem;
-  letter-spacing: 0rem;
-  font-weight: 400;
-  font-style: normal;
-  color: black;
-}
-
-h2 {
-  padding-top: 4rem;
-  font-size: 1.4rem;
-}
-
-h3 {
-  font-weight: 600;
-}
-
-h4 {
-  font-style: italic;
-  font-size: .875rem;
-  letter-spacing: .06rem;
-  color: #999;
-  font-weight: 600;
-}
-
-p {
-  max-width: 49rem;
-}
-
-strong {
-  font-weight: 600;
-}
-
-a {
-  color: black;
-  padding-right: .5rem;
-}
 
 /*
   ========================================
