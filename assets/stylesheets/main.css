@@ -60,7 +60,7 @@ table {
 }
 .container,
 .grid {
-  margin: .75rem auto;
+  margin: 2.75rem auto;
 }
 .grid {
   padding-left: 8%;
@@ -89,10 +89,14 @@ table {
 }
 
 @media screen and (min-width: 64rem){
-  .large-4 {
+  .large-2 {
+    width: 20%;
+  } .large-4 {
     width: 33%;
   } .large-8 {
     width: 66%;
+  } .large-10 {
+    width: 80%; 
   } .large-12 {
     width: 100%;
   }
@@ -152,10 +156,10 @@ h4 {
   font-weight: 600;
 }
 
-/*p {
-  margin-bottom: .75rem;
+p {
+  max-width: 49rem;
 }
-*/
+
 strong {
   font-weight: 600;
 }
