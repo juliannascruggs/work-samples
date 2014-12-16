@@ -192,7 +192,8 @@ a {
 }
 
 .image {
-  box-shadow: 0px 1px 5px #888888;
+  border: solid black 0.063rem;
+  /*box-shadow: 0px 1px 5px #888888;*/
 }
 
 /*
@@ -258,21 +259,45 @@ a {
  
 .cbp-fwslider nav span {
     position: absolute;
-    top: 50%;
-    width: 3.125rem;
-    height: 6.25rem;
-    background: #47a3da;
+    background: #786958;
     color: #fff;
-    font-size: 3.125rem;
     text-align: center;
-    margin-top: 3.125rem;
-    line-height: 6.25rem;
     cursor: pointer;
     font-weight: normal;
+    box-shadow: 0px 1px 5px #888888;
+    font-size: 1.25rem;
+    margin-bottom: .5rem;
+    bottom: 0px;
+    line-height: 1.5rem;
+    width: 1.5rem;
+    height: 1.5rem;
+    z-index: 20;
 }
- 
+
+@media screen and (min-width: 48rem){
+  .cbp-fwslider nav span {  
+    font-size: 1.563rem;
+    margin-bottom: 1.563rem;
+    line-height: 3.125rem;
+    bottom: 0px;
+    width: 1.563rem;
+    height: 3.125rem;
+  }
+}
+
+@media screen and (min-width: 64rem){
+  .cbp-fwslider nav span {
+    font-size: 3.125rem;
+    margin-bottom: 3.125rem;
+    line-height: 6.25rem;
+    bottom: 0px;
+    width: 3.125rem;
+    height: 6.25rem;
+  }
+}
+
 .cbp-fwslider nav span:hover {
-    background: #378fc3;
+    background: #999;
 }
  
 .cbp-fwslider nav span.cbp-fwnext {
@@ -306,8 +331,8 @@ a {
 }
  
 .cbp-fwdots span.cbp-fwcurrent {
-    background: #47a3da;
-    box-shadow: 0 0 0 2px #47a3da;
+    background: #786958;
+    box-shadow: 0px 1px 5px #888888;
     transition: box-shadow 0.2s ease-in-out;
 }
 
